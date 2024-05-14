@@ -1,0 +1,26 @@
+program regimen
+  implicit none
+
+  real :: viscosidad
+  real :: densidad
+  real :: diametro
+  real :: velocidad
+  real :: Reynolds
+
+  print *, 'Enter fluid viscosity in Pa*s:'
+  read(*,*) viscosidad
+
+  print *, 'Enter fluid density in kg/m3:'
+  read(*,*) densidad
+
+  print *, 'Enter piping diameter in m:'
+  read(*,*) diametro
+
+  print *, 'Enter fluid velocity in m/s:'
+  read(*,*) velocidad
+
+  Reynolds = (diametro*velocidad*densidad)/viscosidad
+
+  print *, 'El numero de Reynolds es: ', Reynolds
+
+end program regimen
